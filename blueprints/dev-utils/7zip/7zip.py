@@ -6,7 +6,7 @@ from Package.BinaryPackageBase import BinaryPackageBase
 
 class subinfo(info.infoclass):
     def registerOptions(self):
-        self.parent.package.categoryInfo.platforms = CraftCore.compiler.Platforms.NotFreeBSD & CraftCore.compiler.Platforms.NotAndroid
+        self.parent.package.categoryInfo.platforms &= ~CraftCore.compiler.Platforms.FreeBSD
 
     def setTargets(self):
         self.targets["latest"] = ""
@@ -27,15 +27,15 @@ class Package(BinaryPackageBase):
     def postInstall(self):
         args = []
         appPath = CraftCore.standardDirs.craftRoot() / "dev-utils/7z"
-        if CraftCore.compiler.isWindows:
+        if CraftCore.compiler.platform.isWindows:
             # TODO: arm
             appPath /= "x64/7za.exe"
         else:
             appPath /= "7zz"
-        if CraftCore.compiler.isMacOS and not CraftCore.compiler.isNative():
+        if CraftCore.compiler.platform.isMacOS and not CraftCore.compiler.architecture.isNative:
             args = ["-arch", CraftCore.compiler.hostArchitecture.name.lower(), str(appPath)]
             appPath = "arch"
-        return utils.createShim(self.imageDir() / f"dev-utils/bin/7za{CraftCore.compiler.executableSuffix}", appPath, useAbsolutePath=True, args=args)
+        return utils.createShim(self.imageDir() / f"dev-utils/bin/7za{CraftCore.compiler.platform.executableSuffix}", appPath, useAbsolutePath=True, args=args)
 
     def postQmerge(self):
         CraftCore.cache.clear()

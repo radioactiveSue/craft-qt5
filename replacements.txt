@@ -1,0 +1,9 @@
+s/CraftCore.compiler.platform.isMacOS/CraftCore.compiler.platform.isMacOS/g
+s/CraftCore.compiler.platform.isWindows/CraftCore.compiler.platform.isWindows/g
+s/CraftCore.compiler.platform.isLinux/CraftCore.compiler.platform.isLinux/g
+s/CraftCore.compiler.platform.isAndroid/CraftCore.compiler.platform.isAndroid/g
+s/CraftCore.compiler.platform.isUnix/CraftCore.compiler.platform.isUnix/g
+s/CraftCore.compiler.platform.isFreeBSD/CraftCore.compiler.platform.isFreeBSD/g
+
+
+s/CraftCore.compiler.platform.executableSuffix/CraftCore.compiler.platform.executableSuffix/g
