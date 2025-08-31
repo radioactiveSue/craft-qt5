@@ -1,27 +1,13 @@
-# Craft
- Craft is a cross platform package manager providing source builds, as well as binary artifacts, for hundreds of libraries, Qt and KDE Frameworks.
+# Craft-Qt5 
 
-## Getting started
-[Setting up Craft](https://community.kde.org/Craft) (includes installation instructions)
+Fork of KDE's Craft for MY personal use. I am not a programmer, I just want Qt5 KolourPaint for Windows. 
 
-## Projects using Craft
-* [KDE BinaryFactory: Binaries for KDE applications](https://binary-factory.kde.org/)
-* [ownCloud](https://github.com/owncloud/client)
-    * ```craft --add-blueprint-repository https://github.com/owncloud/craft-blueprints-owncloud.git```
-    * ```craft owncloud-client```
-* [QPrompt](https://github.com/Cuperino/QPrompt)
-    * ```craft --add-blueprint-repository https://github.com/Cuperino/craft-blueprints-qprompt.git```
-    * ```craft qprompt```
-* [Quassel IRC](https://github.com/quassel/quassel)
-    * ```craft --add-blueprint-repository https://github.com/quassel/craft-blueprints-quassel.git```
-    * ```craft quassel```
-* [KDAB GammaRay](https://github.com/KDAB/GammaRay)
-    * ```craft gammaray```
+## Changes: 
 
-## Getting in Touch
+- Renamed branch "master" to "master-qt6". 
+- Renamed branch "qt5-lts" to "master". 
 
-[IRC: #kde-craft](https://web.libera.chat/?channels=#kde-craft)
-
-[Report Bugs](https://phabricator.kde.org/project/profile/61/)
-
-Mailing list: kde-windows@kde.org
+## In-Progress Changes: 
+- Changing any links that lead to KF6 to links that lead to KF5. 
+- Changing any links that lead to Qt6 to links that lead to Qt5. 
+- Fork repositories and rename branches of said repositories when necessary to change KF6 and Qt6 links to KF5 and Qt6 Links.
